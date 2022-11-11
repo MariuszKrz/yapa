@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+{% block title %}Edytuj zadanie{% endblock %}
+
+{% block editForm %}
+
+<!-- ----------------------------	FORMULARZ EDYCJI REKORDÓW ------------------------------>
+		<div class="form">
+			<form method="POST" action="{{ url_for('edit_task', task_id = dane.id) }}">
+				{{ form.csrf_token }}
+				{{ form.task_name.label(class_ = 'form-label') }}</br>{{ form.task_name.data(class_ = 'form-control') }}</br>
+				{{ form.date.label(class_ = 'form-label') }}</br>{{ form.date.data(class_ = 'form-control') }}</br>
+				{{ form.description.label(class_ = 'form-label') }}</br>{{ form.description.data(class_ = 'form-control') }}
+
+				</br><input type="submit" value="Zapisz"/>
+			</form>
+		</div>
+
+{% endblock 

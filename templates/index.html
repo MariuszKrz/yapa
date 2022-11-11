@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Witamy!{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+
+<!-- ----------------------------	MENU  ------------------------------>
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{ url_for('show_table') }}">Terminarz</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled">Disabled</a>
+  </li>
+</ul>
+	<div>
+		{% block addForm %}{% endblock %}
+	</div
+	<div>
+		{% block tabela %}{% endblock %}
+	</div>
+
+</div>
+{% endblock %}

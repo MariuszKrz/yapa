@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+{% block title %}Dodaj zadanie{% endblock %}
+
+{% block addForm %}
+
+<!-- ----------------------------	FORMULARZ DODAWANIA REKORDÓW ------------------------------>
+		<div class="form">
+			<form method="POST" action="{{ url_for('add_task') }}">
+				{{ form.csrf_token }}
+				{{ form.task_name.label(class_ = 'form-label') }}</br>{{ form.task_name(class_ = 'form-control') }}</br>
+				{{ form.date.label(class_ = 'form-label') }}</br>{{ form.date(class_ = 'form-control') }}</br>
+				{{ form.description.label(class_ = 'form-label') }}</br>{{ form.description(class_ = 'form-control') }}
+
+				</br><input type="submit" value="Dodaj"/>
+			</form>
+		</div>
+
+{% endblock %}

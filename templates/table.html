@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+{% block title %}Lista zadań{% endblock %}
+
+{% block tabela %}
+
+<table class="table table-hover table-striped">
+	<tr>
+        <th width="230px">Lp</th><th>Nazwa zadania</th><th>Termin</th><th width="430 px">Opis</th><th  colspan="2">Akcja</th>
+    </tr>
+    <!-- ----------------------------	POBRANIE REKORDÓW ------------------------	-->
+
+		{% for dane in records %}
+			<tr>
+				<td>{{ dane.id }}</td>
+				<td class='data'>{{ dane.name }}</td>
+				<td class='data'>{{ dane.date }}</td>
+				<td>{{ dane.description }}</td>
+
+			</tr>
+		{% endfor %}
+</table>
+{% endblock %}
