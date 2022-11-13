@@ -2,11 +2,13 @@
 {% block title %}Lista zadań{% endblock %}
 
 {% block task %}
-<div class="display-1"><p>ZADANIE</p></div>
 
-		<div class="display-2"><p>{{ dane.name }}</p></div>
+<div class="show_task">
+	<div class="display-3"><p>ZADANIE</p></div>
+
+		<div class="display-4"><p>{{ dane.name }}</p></div>
 		<div>{{ dane.date }}</div>
 		<div>{{ dane.description }}</div>
-
+</div>
 
 {% endblock %}
