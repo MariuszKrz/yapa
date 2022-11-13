@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+{% block title %}Lista zadań{% endblock %}
+
+{% block task %}
+<div class="display-1"><p>ZADANIE</p></div>
+
+		<div class="display-2"><p>{{ dane.name }}</p></div>
+		<div>{{ dane.date }}</div>
+		<div>{{ dane.description }}</div>
+
+
+{% endblock %}
